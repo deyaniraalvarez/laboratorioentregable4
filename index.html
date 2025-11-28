@@ -1,1 +1,99 @@
 sitio web estatico
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mi Primer Sitio Web</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Mi Primer Sitio Web</h1>
+    <h2>Breve biografía</h2>
+  </header>
+
+  <main>
+    <section id="presentacion">
+      <img src="images/foto-perfil.jpg" alt="Foto de perfil" class="foto"/>
+      <p>Hola, soy [Tu Nombre]. Aquí tienes una breve biografía con mi información de contacto y mis redes.</p>
+      <p>Correo: <a href="mailto:tu@email.com">tu@email.com</a></p>
+      <p>Redes: 
+        <a href="https://facebook.com/" target="_blank" rel="noreferrer">Facebook</a> |
+        <a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+      </p>
+    </section>
+
+    <section id="habilidades">
+      <h3>Hobbies y tareas priorizadas</h3>
+      <ul>
+        <li>Diseño web</li>
+        <li>Programación</li>
+        <li>Aprender nuevas herramientas</li>
+      </ul>
+      <h3>Lista ordenada semana</h3>
+      <ol>
+        <li>Lunes: Planificación</li>
+        <li>Martes: Desarrollo</li>
+        <li>Miércoles: Test y revisión</li>
+      </ol>
+    </section>
+
+    <section id="horario">
+      <h3>Horario semanal</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Día</th>
+            <th>Actividad</th>
+            <th>Hora</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>Investigación</td>
+            <td>09:00 - 11:00</td>
+          </tr>
+          <tr>
+            <td>Martes</td>
+            <td>Coding</td>
+            <td>10:00 - 13:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contacto">
+      <h3>Formulario de contacto</h3>
+
+      <!-- Si no usarás servicio externo, el formulario solo hace validación y muestra mensaje -->
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label for="name">Nombre</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="reason">Motivo de contacto</label>
+        <input id="reason" name="reason" type="text" required />
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p id="formStatus" aria-live="polite"></p>
+
+      <p><small>Nota: para recibir mensajes por email activa un servicio como Formspree o Netlify Forms (ver README).</small></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Mi Primer Sitio Web</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
